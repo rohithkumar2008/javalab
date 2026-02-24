@@ -1,46 +1,37 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Scanner;
+import java.io.BufferedReader; 
+import java.io.FileReader; 
+import java.io.IOException; 
+public class TextStatistics 
 
-public class TextStatistics {
+{ 
+	public static void main(String[] args) 
+	{ 
+		String filePath = "path/to/your/textfile.txt";  
 
-    public static void main(String[] args) {
+		try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) 
+		{ 
+			String line; 
+			int characterCount = 0; 
+			int lineCount = 0; 
+			int wordCount = 0; 
+			while ((line = reader.readLine()) != null) 
 
-        Scanner scanner = new Scanner(System.in);
+		{ 
 
-        System.out.print("Enter the text file path: ");
-        String filePath = scanner.nextLine();
+			lineCount++; 
+			characterCount += line.length(); 
+			wordCount += line.split("\\s+").length;  
+		} 
 
-        int characterCount = 0;
-        int lineCount = 0;
-        int wordCount = 0;
+	System.out.println("Characters: " + characterCount); 
+	System.out.println("Lines: " + lineCount); 
+	System.out.println("Words: " + wordCount); 
+	} 
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+	catch (IOException e) 
 
-            String line;
-
-            while ((line = reader.readLine()) != null) {
-                lineCount++;
-
-                // Count characters (excluding newline)
-                characterCount += line.length();
-
-                // Count words safely
-                if (!line.trim().isEmpty()) {
-                    wordCount += line.trim().split("\\s+").length;
-                }
-            }
-
-            System.out.println("\n--- Text File Statistics ---");
-            System.out.println("Lines      : " + lineCount);
-            System.out.println("Words      : " + wordCount);
-            System.out.println("Characters : " + characterCount);
-
-        } catch (IOException e) {
-            System.out.println("\nError: File not found or cannot be read.");
-        }
-
-        scanner.close();
-    }
-}
+	{ 
+		e.printStackTrace(); 
+	} 
+} 
+} 

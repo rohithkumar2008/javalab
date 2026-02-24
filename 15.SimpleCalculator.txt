@@ -81,6 +81,6 @@ public class SimpleCalculator extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new JLP15();
+        new SimpleCalculator();
     }
 }

@@ -1,11 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class SimpleTrafficLightSimulator extends JFrame {
+public class SimpleTrafficLightSimulator extends JFrame 
+{
 
     private JLabel messageLabel;
 
-    public SimpleTrafficLightSimulator() {
+    public SimpleTrafficLightSimulator() 
+{
 
         setTitle("Traffic Light Simulator");
         setSize(300, 200);
@@ -36,12 +38,14 @@ public class SimpleTrafficLightSimulator extends JFrame {
         setVisible(true);
     }
 
-    private void updateMessage(String message, Color color) {
+    private void updateMessage(String message, Color color) 
+{
         messageLabel.setText(message);
         messageLabel.setForeground(color);
     }
 
-    public static void main(String[] args) {
-        new LPL16();
+    public static void main(String[] args) 
+{
+        new SimpleTrafficLightSimulator();
     }
 }

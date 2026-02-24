@@ -90,7 +90,7 @@ class Cube extends Thread
 	}
 }
 
-public class MultiThreadSyn							//Main Class(Block)
+public class MultiThreadSyn							
 {
 	public static void main(String[] args)
 	{
