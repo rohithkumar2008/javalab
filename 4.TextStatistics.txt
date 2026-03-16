@@ -6,7 +6,7 @@ public class TextStatistics
 { 
 	public static void main(String[] args) 
 	{ 
-		String filePath = "path/to/your/textfile.txt";  
+		String filePath = "textfile.txt";  
 
 		try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) 
 		{ 

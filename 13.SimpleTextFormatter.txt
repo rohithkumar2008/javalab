@@ -8,7 +8,7 @@ public class SimpleTextFormatter extends JFrame
     private JTextField textField;
     private JTextArea textArea;
 
-    public SimpleTextFormatter3()   
+    public SimpleTextFormatter()   
     {
         setTitle("Text Formatter");
         setSize(300, 250);
